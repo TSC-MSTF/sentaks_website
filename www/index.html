@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
   <meta charset="utf-8">
@@ -18,6 +18,14 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700"
     rel="stylesheet">
 
+
+	<link rel="stylesheet" href="assets/css/core.min.css">
+	<link rel="stylesheet" href="assets/css/vendor_bundle.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+	<link rel="stylesheet" href="assets/css/mulakod.css">
+
+
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -35,6 +43,15 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+
 </head>
 
 <body>
@@ -446,50 +463,62 @@
         <div class="row">
 
           <div class="col-lg-6">
+              <h4>ADRES</h4>
 
-            <div class="row">
-
-              <div class="col-sm-6 d-none d-sm-block">
+   
+    <div class="row">
  
-                  <div class="footer-info">
-                    <!-- Uncomment below if you prefer to use an image logo -->
-                    <!-- <h1 class="text-light"><a href="#intro" class="scrollto"><span>SENTAKS</span></a></h1>-->
-                    <a href="#header" class="scrollto"><img src="assets/img/logo.svg" alt="" class="w-75"></a>
-                  </div>
- 
-              </div>
 
-              <div class="col-sm-6 col-xs-12">
-                <div class="footer-links">
-                  <h4>LİNKLER</h4>
-                  <ul>
-                    <li><a href="#">Anasayfa</a></li>
-                    <li><a href="#about">Hakkımızda</a></li>
-                    <li><a href="#">Hizmetlerimiz</a></li>
-                    <li><a href="#">SSS</a></li>
+						<!-- call us -->
+						<div class="col-12 col-sm-6 mb-4">
+							<h3 class="font-weight-light text-primary h5 mb">
+								Bizi Arayın
+							</h3>
 
-                  </ul>
-                </div>
+							<p class="m-0">
+								<a href="tel:01555-88978" class="link-muted">+01 785-388-9450</a>
+							</p>
+							<p class="m-0">
+								<a href="email: info@sentaks.net" class="link-muted"> info@sentaks.net</a>
+							</p>
+						</div>
 
-                <div class="footer-links">
-                  <h4>İLETİŞİM</h4>
-                  <p>
+						<!-- address -->
+						<div class="col-12 col-sm-6">
 
-                    <strong>Email:</strong>info@sentaks.net<br>
+							<h3 class="font-weight-light text-primary h5 ">
+								Adresimiz
+							</h3>
 
-                    ERZURUM <br>
-                    <!-- <strong>Telefon:</strong> +1 5589 55488 55<br> -->
+							<p class="m-0">
+								Ata Teknokent B Blok 103 <br>
+								25420 Yakutiye/Erzurum
+							</p>
 
-                  </p>
-                </div>
+						</div>
+					</div>
+					
+							<div class="bg-white shadow-primary-xs rounded p-2 mt-2">
 
-              </div>
+								<!--
+									Map
+								-->
+								<div class="map-leaflet h--400 w-100 rounded" 
+									data-map-tile="voyager" 
+									data-map-zoom="15" 
+									data-map-json='[
+										{ 
+											"map_lat": 39.9050765,
+											"map_long": 41.233428,
+											"map_popup": "<b>Sentaks</b> <br> Ata Teknokent,<br> Erzurum <br> <a href=`tel:7853889450`>850</a>"
+										}
+									]'><!-- map container--></div>
 
-            </div>
+							</div>
 
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-5 offset-lg-1">
 
             <div class="form">
 
@@ -514,7 +543,7 @@
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required"
+                  <textarea class="form-control" name="message" rows="8" data-rule="required"
                     data-msg="Lütfen mesajınızı giriniz !" placeholder="Mesaj"></textarea>
                   <div class="validate"></div>
                 </div>
@@ -553,7 +582,9 @@
     </div>
   </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+ 
+	<!-- vendor loaded by core -->
+	<script async src="assets/js/core.min.js"></script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
